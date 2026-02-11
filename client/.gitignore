@@ -24,3 +24,5 @@ _billing.tsx
 *.njsproj
 *.sln
 *.sw?
+
+.vercel
