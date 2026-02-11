@@ -1,0 +1,21 @@
+title,amount,type,date,category,paymentMethod,description
+Monthly Salary,65000,INCOME,2025-08-01,Salary,BANK_TRANSFER,August salary credited
+Supermarket groceries,3200,EXPENSE,2025-08-03,Groceries,CARD,Weekly essentials
+Dinner at Italian place,1450,EXPENSE,2025-08-04,Dining,CARD,Dinner with friends
+Uber ride,280,EXPENSE,2025-08-05,Transport,MOBILE_PAYMENT,Trip to office
+Netflix subscription,499,EXPENSE,2025-08-06,Entertainment,AUTO_DEBIT,Monthly subscription
+Electricity bill,2100,EXPENSE,2025-08-07,Bills,AUTO_DEBIT,Electricity payment
+House rent,18000,EXPENSE,2025-08-08,Rent,BANK_TRANSFER,Monthly rent
+Clothes shopping,3500,EXPENSE,2025-08-10,Shopping,CARD,New jeans and t-shirts
+Pharmacy purchase,750,EXPENSE,2025-08-11,Healthcare,CARD,Medicines for cold
+Freelance project,12000,INCOME,2025-08-12,Salary,BANK_TRANSFER,Payment from client
+Snacks at cafe,250,EXPENSE,2025-08-13,Dining,CASH,Coffee and snacks
+Fuel refill,2200,EXPENSE,2025-08-14,Transport,CARD,Car fuel
+Mobile recharge,399,EXPENSE,2025-08-15,Bills,MOBILE_PAYMENT,Prepaid recharge
+Gift shopping,1800,EXPENSE,2025-08-16,Shopping,CARD,Birthday gift
+Concert tickets,5000,EXPENSE,2025-08-17,Entertainment,CARD,Music concert
+Insurance premium,4500,EXPENSE,2025-08-18,Bills,AUTO_DEBIT,Quarterly insurance
+Sold old laptop,15000,INCOME,2025-08-19,Other,CASH,Second-hand sale
+Vegetable market,600,EXPENSE,2025-08-20,Groceries,CASH,Weekly veggies
+Part-time tutoring,5000,INCOME,2025-08-21,Salary,BANK_TRANSFER,Tuition fees
+Doctor consultation,1200,EXPENSE,2025-08-22,Healthcare,CARD,General checkup
