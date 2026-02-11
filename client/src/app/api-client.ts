@@ -9,8 +9,8 @@ const baseQuery = fetchBaseQuery({
     console.log("🔍 API Client - Auth state:", auth);
     
     if (auth?.accessToken) {
-      headers.set("Authorization", `Bearer ?{auth.accessToken}`);
-      console.log("✅ API Client - Authorization header set:", `Bearer ?{auth.accessToken.substring(0, 20)}...`);
+      headers.set("Authorization", `Bearer ${auth.accessToken}`);
+      console.log("✅ API Client - Authorization header set:", `Bearer ${auth.accessToken.substring(0, 20)}...`);
     } else {
       console.log("❌ API Client - No access token found");
     }
