@@ -79,7 +79,7 @@ const CustomInputForm: React.FC<CustomInputFormProps> = ({ onSubmit, isLoading }
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <Label htmlFor="monthlyIncome">Monthly Income (?)</Label>
+                <Label htmlFor="monthlyIncome">Monthly Income (₹)</Label>
                 <Input
                   id="monthlyIncome"
                   type="number"
@@ -92,7 +92,7 @@ const CustomInputForm: React.FC<CustomInputFormProps> = ({ onSubmit, isLoading }
                 />
               </div>
               <div>
-                <Label htmlFor="monthlyBudget">Monthly Budget (?)</Label>
+                <Label htmlFor="monthlyBudget">Monthly Budget (₹)</Label>
                 <Input
                   id="monthlyBudget"
                   type="number"
@@ -105,7 +105,7 @@ const CustomInputForm: React.FC<CustomInputFormProps> = ({ onSubmit, isLoading }
                 />
               </div>
               <div>
-                <Label htmlFor="totalDebt">Total Debt (?)</Label>
+                <Label htmlFor="totalDebt">Total Debt (₹)</Label>
                 <Input
                   id="totalDebt"
                   type="number"
@@ -118,7 +118,7 @@ const CustomInputForm: React.FC<CustomInputFormProps> = ({ onSubmit, isLoading }
                 />
               </div>
               <div>
-                <Label htmlFor="emergencyFund">Emergency Fund (?)</Label>
+                <Label htmlFor="emergencyFund">Emergency Fund (₹)</Label>
                 <Input
                   id="emergencyFund"
                   type="number"
@@ -131,7 +131,7 @@ const CustomInputForm: React.FC<CustomInputFormProps> = ({ onSubmit, isLoading }
                 />
               </div>
               <div>
-                <Label htmlFor="netWorth">Net Worth (?)</Label>
+                <Label htmlFor="netWorth">Net Worth (₹)</Label>
                 <Input
                   id="netWorth"
                   type="number"
@@ -144,7 +144,7 @@ const CustomInputForm: React.FC<CustomInputFormProps> = ({ onSubmit, isLoading }
                 />
               </div>
               <div>
-                <Label htmlFor="investmentPortfolio">Investment Portfolio (?)</Label>
+                <Label htmlFor="investmentPortfolio">Investment Portfolio (₹)</Label>
                 <Input
                   id="investmentPortfolio"
                   type="number"

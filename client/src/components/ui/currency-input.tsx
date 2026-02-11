@@ -13,7 +13,7 @@ interface CurrencyInputFieldProps {
 }
 
 const CurrencyInputField = forwardRef<HTMLInputElement, CurrencyInputFieldProps>(
-  ({ name, value, onValueChange, placeholder, className, prefix = '?', disabled }, ref) => {
+  ({ name, value, onValueChange, placeholder, className, prefix = '₹', disabled }, ref) => {
     return (
       <CurrencyInput
         id={name}

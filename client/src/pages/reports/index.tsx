@@ -116,7 +116,7 @@ export default function Reports() {
                     <div className="text-sm text-muted-foreground">Income</div>
                     <div className="text-xl font-semibold">
                       {typeof report.summary.income === "number"
-                        ? `??{report.summary.income.toFixed(2)}`
+                        ? `₹?{report.summary.income.toFixed(2)}`
                         : report.summary.income}
                     </div>
                   </div>
@@ -124,7 +124,7 @@ export default function Reports() {
                     <div className="text-sm text-muted-foreground">Expenses</div>
                     <div className="text-xl font-semibold">
                       {typeof report.summary.expenses === "number"
-                        ? `??{report.summary.expenses.toFixed(2)}`
+                        ? `₹?{report.summary.expenses.toFixed(2)}`
                         : report.summary.expenses}
                     </div>
                   </div>
@@ -132,7 +132,7 @@ export default function Reports() {
                     <div className="text-sm text-muted-foreground">Balance</div>
                     <div className="text-xl font-semibold">
                       {typeof report.summary.balance === "number"
-                        ? `??{report.summary.balance.toFixed(2)}`
+                        ? `₹?{report.summary.balance.toFixed(2)}`
                         : report.summary.balance}
                     </div>
                   </div>
