@@ -175,10 +175,10 @@ const SpendingPatternCard: React.FC = () => {
                           {getTrendIcon(pattern.trend)}
                         </div>
                         <div className="text-right">
-                          <div className={`text-lg font-bold ?{getTrendColor(pattern.trend)}`}>
+                          <div className={`text-lg font-bold ${getTrendColor(pattern.trend)}`}>
                             {formatCurrency(pattern.averageAmount)}
                           </div>
-                          <Badge variant="secondary" className={`?{getConfidenceColor(pattern.confidence)} text-xs font-bold px-3 py-1`}>
+                          <Badge variant="secondary" className={`${getConfidenceColor(pattern.confidence)} text-xs font-bold px-3 py-1`}>
                             {Math.round(pattern.confidence * 100)}% confidence
                           </Badge>
                         </div>
@@ -203,10 +203,10 @@ const SpendingPatternCard: React.FC = () => {
                           {getTrendIcon(pattern.trend)}
                         </div>
                         <div className="text-right">
-                          <div className={`text-lg font-bold ?{getTrendColor(pattern.trend)}`}>
+                          <div className={`text-lg font-bold ${getTrendColor(pattern.trend)}`}>
                             {formatCurrency(pattern.averageAmount)}
                           </div>
-                          <Badge variant="secondary" className={`?{getConfidenceColor(pattern.confidence)} text-xs font-bold px-3 py-1`}>
+                          <Badge variant="secondary" className={`${getConfidenceColor(pattern.confidence)} text-xs font-bold px-3 py-1`}>
                             {Math.round(pattern.confidence * 100)}% confidence
                           </Badge>
                         </div>
@@ -231,10 +231,10 @@ const SpendingPatternCard: React.FC = () => {
                           {getTrendIcon(pattern.trend)}
                         </div>
                         <div className="text-right">
-                          <div className={`text-lg font-bold ?{getTrendColor(pattern.trend)}`}>
+                          <div className={`text-lg font-bold ${getTrendColor(pattern.trend)}`}>
                             {formatCurrency(pattern.averageAmount)}
                           </div>
-                          <Badge variant="secondary" className={`?{getConfidenceColor(pattern.confidence)} text-xs font-bold px-3 py-1`}>
+                          <Badge variant="secondary" className={`${getConfidenceColor(pattern.confidence)} text-xs font-bold px-3 py-1`}>
                             {Math.round(pattern.confidence * 100)}% confidence
                           </Badge>
                         </div>

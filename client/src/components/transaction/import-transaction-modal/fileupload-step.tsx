@@ -39,7 +39,7 @@ const FileUploadStep = ({ onFileUpload }: FileUploadStepProps) => {
     if (!file) return;
     if (file.size > MAX_FILE_SIZE) {
       toast.error(
-        `File size exceeds the limit of ?{MAX_FILE_SIZE / 1024 / 1024} MB`
+        `File size exceeds the limit of ${MAX_FILE_SIZE / 1024 / 1024} MB`
       );
       return;
     }
@@ -58,7 +58,7 @@ const FileUploadStep = ({ onFileUpload }: FileUploadStepProps) => {
           console.log(results, "results");
           if (results.data.length > MAX_IMPORT_LIMIT) {
             toast.error(
-              `You can only import up to ?{MAX_IMPORT_LIMIT} transactions.`
+              `You can only import up to ${MAX_IMPORT_LIMIT} transactions.`
             );
             resetProgress();
             return;

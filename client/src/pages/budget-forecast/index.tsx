@@ -85,14 +85,14 @@ const BudgetForecastPage = () => {
 							</div>
 							<div className="text-sm font-medium">{Math.round((forecast.confidence.overall || 0) * 100)}%</div>
 						</div>
-						<div className="text-sm text-gray-700">Total per {forecast.granularity}: ?{forecast.totalBudgetPerPeriod}</div>
+						<div className="text-sm text-gray-700">Total per {forecast.granularity}: ₹{forecast.totalBudgetPerPeriod}</div>
 						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 							{forecast.categories.map((c) => (
 								<Card key={c.name} className="border">
 									<CardContent className="pt-4">
 										<div className="font-medium capitalize">{c.name}</div>
-										<div className="text-sm text-gray-600">Recommended: ?{c.recommendedAmount}</div>
-										<div className="text-xs text-gray-500">Band: ?{c.min} - ?{c.max}</div>
+										<div className="text-sm text-gray-600">Recommended: ₹{c.recommendedAmount}</div>
+										<div className="text-xs text-gray-500">Band: ₹{c.min} - ₹{c.max}</div>
 										<div className="text-xs text-gray-500">Confidence: {Math.round(c.confidence * 100)}%</div>
 										{c.reasoning && <div className="text-xs text-gray-500 mt-2">{c.reasoning}</div>}
 									</CardContent>

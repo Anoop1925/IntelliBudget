@@ -53,7 +53,7 @@ const ExpensePieChart = (props: { dateRange?: DateRangeType }) => {
     return (
       <div className="grid grid-cols-1 gap-x-4 gap-y-2 mt-4">
         {categories.map((entry, index) => (
-          <div key={`legend-?{index}`} className="flex items-center gap-2">
+          <div key={`legend-${index}`} className="flex items-center gap-2">
             <div
               className="h-3 w-3 rounded-full"
               style={{ backgroundColor: COLORS[index % COLORS.length] }}
@@ -113,7 +113,7 @@ const ExpensePieChart = (props: { dateRange?: DateRangeType }) => {
                 >
                   {categories.map((_, index) => (
                     <Cell
-                      key={`cell-?{index}`}
+                      key={`cell-${index}`}
                       fill={COLORS[index % COLORS.length]}
                     />
                   ))}
@@ -133,7 +133,7 @@ const ExpensePieChart = (props: { dateRange?: DateRangeType }) => {
                               y={viewBox.cy}
                               className="fill-foreground text-2xl font-bold"
                             >
-                              ?{totalSpent.toLocaleString()}
+                              ₹{totalSpent.toLocaleString()}
                             </tspan>
                             <tspan
                               x={viewBox.cx}

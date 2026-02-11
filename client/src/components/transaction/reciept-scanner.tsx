@@ -90,10 +90,10 @@ const ReceiptScanner = ({
       <div className="flex items-start gap-3 border-b pb-4">
         {/* Receipt Preview */}
         <div
-          className={`h-12 w-12 rounded-md border bg-cover bg-center ?{
+          className={`h-12 w-12 rounded-md border bg-cover bg-center ${
             !receipt ? "bg-muted" : ""
           }`}
-          style={receipt ? { backgroundImage: `url(?{receipt})` } : {}}
+          style={receipt ? { backgroundImage: `url(${receipt})` } : {}}
         >
           {!receipt && (
             <div className="flex h-full items-center justify-center text-muted-foreground">

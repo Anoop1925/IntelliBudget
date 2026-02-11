@@ -16,7 +16,7 @@ export const EmptyState: React.FC<EmptyStateProps> = ({
 }) => {
   const Icon = icon || FileSearch
   return (
-    <div className={`flex flex-col items-center justify-center min-h-[300px] w-full ?{className}`}>
+    <div className={`flex flex-col items-center justify-center min-h-[300px] w-full ${className}`}>
       {Icon && (
         <div className="bg-slate-100 p-4 rounded-full mb-6">
           <Icon className="w-8 h-8 text-muted-foreground"  />

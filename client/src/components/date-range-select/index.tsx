@@ -136,7 +136,7 @@ export const DateRangeSelect = ({
   const displayText = dateRange
     ? presets.find((p) => p.value === dateRange.value)?.label ||
       (dateRange.from
-        ? `?{format(dateRange.from, "MMM dd, y")} - ?{
+        ? `${format(dateRange.from, "MMM dd, y")} - ${
             dateRange.to ? format(dateRange.to, "MMM dd, y") : "Present"
           }`
         : "Select a duration")

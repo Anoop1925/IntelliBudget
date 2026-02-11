@@ -134,7 +134,7 @@ const FinancialHealthDashboard = () => {
             </CardHeader>
             <CardContent className="pt-6">
               <div className="text-center">
-                <div className={`text-6xl font-bold ?{getScoreColor(assessment.overallScore)}`}>
+                <div className={`text-6xl font-bold ${getScoreColor(assessment.overallScore)}`}>
                   {assessment.overallScore}
                 </div>
                 <div className="text-gray-600 mt-2">out of 100</div>
@@ -165,7 +165,7 @@ const FinancialHealthDashboard = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="text-center">
-                    <div className={`text-3xl font-bold ?{getScoreColor(score)}`}>
+                    <div className={`text-3xl font-bold ${getScoreColor(score)}`}>
                       {score}
                     </div>
                     <Progress value={score} className="mt-2" />

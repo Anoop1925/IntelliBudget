@@ -58,14 +58,14 @@ export const transactionApi = apiClient.injectEndpoints({
 
     getSingleTransaction: builder.query<GetSingleTransactionResponse, string>({
       query: (id) => ({
-        url: `/transaction/?{id}`,
+        url: `/transaction/${id}`,
         method: "GET",
       }),
     }),
 
     duplicateTransaction: builder.mutation<void, string>({
       query: (id) => ({
-        url: `/transaction/duplicate/?{id}`,
+        url: `/transaction/duplicate/${id}`,
         method: "PUT",
       }),
       invalidatesTags: ["transactions"],
@@ -73,7 +73,7 @@ export const transactionApi = apiClient.injectEndpoints({
 
     updateTransaction: builder.mutation<void, UpdateTransactionPayload>({
       query: ({ id, transaction }) => ({
-        url: `/transaction/update/?{id}`,
+        url: `/transaction/update/${id}`,
         method: "PUT",
         body: transaction,
       }),
@@ -93,7 +93,7 @@ export const transactionApi = apiClient.injectEndpoints({
 
     deleteTransaction: builder.mutation<void, string>({
       query: (id) => ({
-        url: `/transaction/delete/?{id}`,
+        url: `/transaction/delete/${id}`,
         method: "DELETE",
       }),
       invalidatesTags: ["transactions", "analytics"],
