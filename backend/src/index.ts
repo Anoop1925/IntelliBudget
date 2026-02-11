@@ -33,7 +33,7 @@ app.use(passport.initialize());
 
 app.use(
   cors({
-    origin: Env.FRONTEND_ORIGIN,
+    origin: Env.FRONTEND_ORIGIN.split(','),
     credentials: true,
   })
 );
