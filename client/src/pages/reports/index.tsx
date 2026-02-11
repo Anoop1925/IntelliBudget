@@ -38,7 +38,7 @@ export default function Reports() {
       .then((res) => {
         setReport(res);
         setOpen(true);
-        toast.success(`Report generated ${res.period}`);
+        toast.success(`Report generated ?{res.period}`);
       })
       .catch((err) => {
         const msg = err?.data?.message || "Failed to generate report";
@@ -54,7 +54,7 @@ export default function Reports() {
     sendReportNow({ from: fromISO, to: toISO })
       .unwrap()
       .then((res) => {
-        toast.success(res.message || `Send report: ${res.status}`);
+        toast.success(res.message || `Send report: ?{res.status}`);
       })
       .catch((err) => {
         const msg = err?.data?.message || "Failed to send report";
@@ -116,7 +116,7 @@ export default function Reports() {
                     <div className="text-sm text-muted-foreground">Income</div>
                     <div className="text-xl font-semibold">
                       {typeof report.summary.income === "number"
-                        ? `$${report.summary.income.toFixed(2)}`
+                        ? `??{report.summary.income.toFixed(2)}`
                         : report.summary.income}
                     </div>
                   </div>
@@ -124,7 +124,7 @@ export default function Reports() {
                     <div className="text-sm text-muted-foreground">Expenses</div>
                     <div className="text-xl font-semibold">
                       {typeof report.summary.expenses === "number"
-                        ? `$${report.summary.expenses.toFixed(2)}`
+                        ? `??{report.summary.expenses.toFixed(2)}`
                         : report.summary.expenses}
                     </div>
                   </div>
@@ -132,7 +132,7 @@ export default function Reports() {
                     <div className="text-sm text-muted-foreground">Balance</div>
                     <div className="text-xl font-semibold">
                       {typeof report.summary.balance === "number"
-                        ? `$${report.summary.balance.toFixed(2)}`
+                        ? `??{report.summary.balance.toFixed(2)}`
                         : report.summary.balance}
                     </div>
                   </div>
@@ -146,8 +146,8 @@ export default function Reports() {
                   <div className="font-medium mb-2">Top Spending Categories</div>
                   <ul className="list-disc pl-5 space-y-1">
                     {report.summary.topCategories?.map((c: any, idx: number) => (
-                      <li key={`${c.name}-${idx}`}>
-                        {c.name}: {typeof c.amount === "number" ? `$${c.amount}` : c.amount} ({c.percent}%)
+                      <li key={`?{c.name}-?{idx}`}>
+                        {c.name}: {typeof c.amount === "number" ? `??{c.amount}` : c.amount} ({c.percent}%)
                       </li>
                     ))}
                   </ul>
@@ -158,7 +158,7 @@ export default function Reports() {
                   <ul className="list-disc pl-5 space-y-1">
                     {Array.isArray(report.insights) && report.insights.length > 0 ? (
                       report.insights.map((ins: any, idx: number) => (
-                        <li key={`insight-${idx}`}>{typeof ins === "string" ? ins : JSON.stringify(ins)}</li>
+                        <li key={`insight-?{idx}`}>{typeof ins === "string" ? ins : JSON.stringify(ins)}</li>
                       ))
                     ) : (
                       <li key="insight-empty">No insights available</li>

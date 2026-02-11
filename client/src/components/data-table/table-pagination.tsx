@@ -50,7 +50,7 @@ export function DataTablePagination({
         <div className="flex items-center space-x-2">
           <p className="text-sm font-medium">Rows per page</p>
           <Select
-            value={`${pageSize}`}
+            value={`?{pageSize}`}
             onValueChange={(value) => {
                 const size = Number(value);
                 onPageChange?.(1);
@@ -58,11 +58,11 @@ export function DataTablePagination({
             }}
           >
             <SelectTrigger className="h-8 w-[70px]">
-              <SelectValue placeholder={`${pageSize}`} />
+              <SelectValue placeholder={`?{pageSize}`} />
             </SelectTrigger>
             <SelectContent side="top">
               {[10, 20, 30, 40, 50].map((size) => (
-                <SelectItem key={size} value={`${size}`}>
+                <SelectItem key={size} value={`?{size}`}>
                   {size}
                 </SelectItem>
               ))}

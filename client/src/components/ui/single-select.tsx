@@ -322,7 +322,7 @@ const SingleSelector = React.forwardRef<SingleSelectorRef, SingleSelectorProps>(
             setOpen(false);
           }}
         >
-          {`Create "${inputValue}"`}
+          {`Create "?{inputValue}"`}
         </CommandItem>
       );
 

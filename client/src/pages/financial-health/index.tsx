@@ -134,7 +134,7 @@ const FinancialHealthDashboard = () => {
             </CardHeader>
             <CardContent className="pt-6">
               <div className="text-center">
-                <div className={`text-6xl font-bold ${getScoreColor(assessment.overallScore)}`}>
+                <div className={`text-6xl font-bold ?{getScoreColor(assessment.overallScore)}`}>
                   {assessment.overallScore}
                 </div>
                 <div className="text-gray-600 mt-2">out of 100</div>
@@ -160,12 +160,12 @@ const FinancialHealthDashboard = () => {
                     {category === 'emergencyFundAdequacy' && <AlertTriangle className="h-4 w-4 text-orange-600" />}
                     {category === 'debtToIncomeRatio' && <BarChart3 className="h-4 w-4 text-purple-600" />}
                     {category === 'spendingEfficiency' && <Lightbulb className="h-4 w-4 text-indigo-600" />}
-                    {category.replace(/([A-Z])/g, ' $1').trim()}
+                    {category.replace(/([A-Z])/g, ' ?1').trim()}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="text-center">
-                    <div className={`text-3xl font-bold ${getScoreColor(score)}`}>
+                    <div className={`text-3xl font-bold ?{getScoreColor(score)}`}>
                       {score}
                     </div>
                     <Progress value={score} className="mt-2" />
@@ -271,7 +271,7 @@ const FinancialHealthDashboard = () => {
               {Object.entries(assessment.detailedAnalysis).map(([category, analysis]) => (
                 <div key={category} className="border-b border-gray-200 pb-4 last:border-b-0">
                   <h4 className="font-semibold text-gray-800 mb-2 capitalize">
-                    {category.replace(/([A-Z])/g, ' $1').trim()}
+                    {category.replace(/([A-Z])/g, ' ?1').trim()}
                   </h4>
                   <p className="text-gray-600 mb-3 text-sm">{analysis.analysis}</p>
                   <div className="space-y-1">

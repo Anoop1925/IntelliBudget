@@ -46,7 +46,7 @@ const getCardStatus = (
         label: "Low Savings",
         color: "text-red-400",
         Icon: TrendingDownIcon,
-        description: `Only ${value.toFixed(1)}% saved`,
+        description: `Only ?{value.toFixed(1)}% saved`,
       };
     }
 
@@ -55,7 +55,7 @@ const getCardStatus = (
         label: "Moderate",
         color: "text-yellow-400",
         Icon: TrendingDownIcon,
-        description: `${expenseRatio?.toFixed(0)}% spent`,
+        description: `?{expenseRatio?.toFixed(0)}% spent`,
       };
     }
 
@@ -65,7 +65,7 @@ const getCardStatus = (
         label: "High Spend",
         color: "text-red-400",
         Icon: TrendingDownIcon,
-        description: `${expenseRatio.toFixed(0)}% spent`,
+        description: `?{expenseRatio.toFixed(0)}% spent`,
       };
     }
 
@@ -74,7 +74,7 @@ const getCardStatus = (
         label: "Warning: High Spend",
         color: "text-orange-400",
         Icon: TrendingDownIcon,
-        description: `${expenseRatio.toFixed(0)}% spent`,
+        description: `?{expenseRatio.toFixed(0)}% spent`,
       };
     }
 
@@ -94,7 +94,7 @@ const getCardStatus = (
           : "Balance";
 
     return {
-      label: `No ${typeLabel}`,
+      label: `No ?{typeLabel}`,
       color: "text-gray-400",
       Icon: TrendingDownIcon,
       description: ``,
@@ -203,7 +203,7 @@ const SummaryCard: FC<SummaryCardProps> = ({
             <div className="flex items-center gap-1.5">
               <status.Icon className={cn("size-3.5", status.color)} />
               <span className={status.color}>
-                {status.label} {value !== 0 && `(${formatPercentage(value)})`}
+                {status.label} {value !== 0 && `(?{formatPercentage(value)})`}
               </span>
               {status.description && (
                 <span className="text-gray-400 ml-1">

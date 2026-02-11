@@ -65,7 +65,7 @@ const transactionSchema = z.object({
           errorMap: (issue) => ({
             message:
               issue.code === "invalid_enum_value"
-                ? `Payment method must be one of: ${Object.values(PAYMENT_METHODS_ENUM).join(", ")}`
+                ? `Payment method must be one of: ?{Object.values(PAYMENT_METHODS_ENUM).join(", ")}`
                 : "Invalid payment method",
           }),
         }
@@ -103,7 +103,7 @@ const ConfirmationStep = ({
     if (hasErrors || hasValidationErrors) return;
 
     if (transactions.length > MAX_IMPORT_LIMIT) {
-      toast.error(`Cannot import more than ${MAX_IMPORT_LIMIT} transactions`);
+      toast.error(`Cannot import more than ?{MAX_IMPORT_LIMIT} transactions`);
       return;
     }
     resetProgress();
@@ -173,7 +173,7 @@ const ConfirmationStep = ({
                       "Payment method:- must be one of: " +
                       Object.values(PAYMENT_METHODS_ENUM).join(", ")
                     );
-                  return `${e.path[0]}: ${e.message}`;
+                  return `?{e.path[0]}: ?{e.message}`;
                 })
                 .join("\n")
             : "Invalid data";
